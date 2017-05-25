@@ -1,9 +1,9 @@
 # Linux-Server
 
 #### Notes for reviewer:
-  * Public IP: 34.201.15.59
+  * Public IP: 34.201.209.148
   * SSH PORT: 2200
-  * Project URL: http://ec2-34-201-15-59.compute-1.amazonaws.com/
+  * Project URL: http://ec2-34-201-209-148.compute-1.amazonaws.com/
 ### Tasks given and method for completion:
 
 * Start a new Ubuntu Linux server instance on Amazon Lightsail.
@@ -14,7 +14,7 @@
   * You will get your respective public IP address.
   * Download the default key-pair and copy to /.ssh folder.
   * Open your terminal and type in chmod 600 ~/.ssh/key.pem
-  * Now Use the command `ssh -i ~/.ssh/key.pem ubuntu@34.201.15.59` to create the instance on your terminal
+  * Now Use the command `ssh -i ~/.ssh/key.pem ubuntu@34.201.209.148` to create the instance on your terminal
 
 * Create a new user named grader
   * `sudo adduser grader`
@@ -120,8 +120,8 @@
     * Paste the following:
     ```
     <VirtualHost *:80>
-      ServerName 34.201.15.59
-      ServerAdmin admin@34.201.15.59
+      ServerName 34.201.209.148
+      ServerAdmin admin@34.201.209.148
       WSGIScriptAlias / /var/www/catalog/catalog.wsgi
       <Directory /var/www/catalog/catalog/>
           Order allow,deny
@@ -213,4 +213,4 @@
     * restart apache server `sudo service apache2 restart`
     * in your google developer console add your host name and IP address to Authorized Javascript origins. And add YOURHOSTNAME/ouath2callback to the Authorized redirect URIs.
  
-[project url]: http://ec2-34-201-15-59.compute-1.amazonaws.com/
+[project url]: http://ec2-34-201-209-148.compute-1.amazonaws.com/
